@@ -1,0 +1,31 @@
+
+
+
+
+$(document).ready(function() {
+
+	let display = $("<%= j (render 'layouts/email') %>");
+	let displaybis = $("<%= j (render 'layouts/email') %>");
+	$( "ul" ).append(display);
+
+
+
+
+
+
+	$( "ul" ).click(function() {
+		alert( "les alerts onclic fonctionnent" );
+
+	});
+
+
+
+
+
+});
+
+
+// $( ".target" ).append();// inserts the specified content as the last child of each element in the jQuery collection
+// $( ".target" ).prepend();// inserts the specified content as the first child of each element in the jQuery collection
+// $( ".target" ).show();// $( "span,div" ).show( "slow" );
+// title.addEventListener('click', function() { $('ul').append(display);

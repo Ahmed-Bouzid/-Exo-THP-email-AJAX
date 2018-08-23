@@ -1,0 +1,36 @@
+<div style="float: left; margin-left: 300px;">
+  <h2>Create a new email</h2>
+  <div class="form">
+    <%= form_with model: @email do |f| %>
+    <div class="form-control">
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </div>
+    <div class="form-control">
+      <%= f.label :content %>
+      <%= f.text_field :content %>
+    </div>
+    <%= f.submit %>
+    <% end %>
+  </div>
+</div>
+
+
+
+<div style="float: right; margin-right: 500px; ">
+  <h1>All the emails</h1>
+
+  <div>
+    <ul>
+      <% @emails.each do |g|  %>
+      <div > <li > <%= g.title %> </li> </div>
+      <% end %>
+    </ul>
+  </div>
+
+
+  <%= link_to "Delete", email_path(:id), remote: true, method: :delete %>
+
+</div>
+
+
